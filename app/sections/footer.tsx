@@ -1,8 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "@/app/components/ui/button";
+import { Separator } from "@/app/components/ui/separator";
 
 const COPY = {
   logo: "Subtillis",
+  legalName: "Subtillis Corp",
   tagline: "AI agents for field service operations. Built for contractors who run lean and move fast.",
   cta: "Book a Meeting",
   ctaHref: "https://app.apollo.io/#/meet/aditya_modak_8e3/30-min",
@@ -30,7 +31,7 @@ export function Footer() {
         <Separator className="my-8 opacity-20" />
 
         <p className="text-xs opacity-40">
-          © {new Date().getFullYear()} {COPY.logo}. All rights reserved.
+          © {new Date().getFullYear()} {COPY.legalName}. All rights reserved.
         </p>
       </div>
     </footer>

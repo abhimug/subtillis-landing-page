@@ -1,6 +1,8 @@
 import Image from "next/image";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import { Card, CardContent, CardHeader } from "@/app/components/ui/card";
+import { Separator } from "@/app/components/ui/separator";
+import abhinavPhoto from "@/app/assets/Bob_Mugunda.jpeg";
+import adityaPhoto from "@/app/assets/Aditya_Modak.jpeg";
 
 const COPY = {
   intro: "Commercial contractors keep the built world running, but they're always last to get new technology. We're bringing frontier AI expertise to an industry that deserves it.",
@@ -12,14 +14,14 @@ const FOUNDERS = [
     role: "Co-Founder",
     background: "Former AI Engineer, Tesla",
     bio: "Introduced AI to Tesla's global supply chain systems.",
-    photo: "/Bob_Mugunda.jpeg",
+    photo: abhinavPhoto,
   },
   {
     name: "Aditya Modak",
     role: "Co-Founder",
     background: "Former Investor, Bain Capital Ventures",
     bio: "Invested in 7 companies, 3 of which are now worth over +$1B.",
-    photo: "/Aditya_Modak.jpeg",
+    photo: adityaPhoto,
   },
 ];
 

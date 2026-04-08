@@ -1,8 +1,9 @@
-import { Nav } from "@/components/sections/nav";
-import { Hero } from "@/components/sections/hero";
-import { WhatWeBuilding } from "@/components/sections/what-we-building";
-import { WhoWeAre } from "@/components/sections/who-we-are";
-import { Footer } from "@/components/sections/footer";
+import { Nav } from "@/app/sections/nav";
+import { Hero } from "@/app/sections/hero";
+import { WhatWeBuilding } from "@/app/sections/what-we-building";
+import { Demo } from "@/app/sections/demo-loader";
+import { WhoWeAre } from "@/app/sections/who-we-are";
+import { Footer } from "@/app/sections/footer";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <WhatWeBuilding />
+      <Demo />
       <WhoWeAre />
       <Footer />
     </main>

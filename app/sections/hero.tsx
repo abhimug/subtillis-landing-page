@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { DispatchPreview } from "@/components/animation/dispatch-preview";
+import { Button } from "@/app/components/ui/button";
+import { DispatchPreview } from "@/app/animations/dispatch-preview";
 
 const COPY = {
   headline: "AI agents for commercial service contractors",

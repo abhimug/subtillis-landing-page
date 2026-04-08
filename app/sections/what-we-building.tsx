@@ -1,7 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { DispatchVisual } from "@/components/cards/dispatch-visual";
-import { SchedulingVisual } from "@/components/cards/scheduling-visual";
-import { FieldCommunicationVisual } from "@/components/cards/field-communication-visual";
+import { Card, CardContent } from "@/app/components/ui/card";
+import { DispatchVisual } from "@/app/components/what-we-building-cards/dispatch-visual";
+import { SchedulingVisual } from "@/app/components/what-we-building-cards/scheduling-visual";
+import { FieldCommunicationVisual } from "@/app/components/what-we-building-cards/field-communication-visual";
 
 const COPY = {
   headline: "The coordination layer for field service",

@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/app/components/ui/separator";
 
 const COPY = {
   sectionLabel: "Pre-Arrival Brief",
