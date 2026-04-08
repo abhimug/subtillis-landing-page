@@ -12,7 +12,7 @@ import type { TranscriptMessage } from "@/shared/types";
 
 // ── Copy ──────────────────────────────────────────────
 const COPY = {
-  agentName: "Aria",
+  agentName: "Alex",
   agentRole: "AI scheduling agent",
   callCta: "Start call",
   endCta: "End call",
@@ -86,7 +86,7 @@ function Transcript({ messages }: { messages: TranscriptMessage[] }) {
           }
         >
           <span className="font-semibold">
-            {msg.source === "agent" ? "Aria" : "You"}:
+            {msg.source === "agent" ? "Alex" : "You"}:
           </span>{" "}
           {msg.text}
         </div>
