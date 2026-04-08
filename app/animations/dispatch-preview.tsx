@@ -1,9 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Badge } from "@/app/components/ui/badge";
 import "./dispatch-preview.css";
 
-const NOTIFICATIONS = [
+type Status = "Dispatched" | "En Route" | "Rescheduled" | "Optimized" | "Resolved";
+
+const STATUS_STYLES: Record<Status, string> = {
+  Dispatched:  "bg-accent/40 text-accent-foreground",
+  "En Route":  "bg-primary/10 text-primary",
+  Rescheduled: "bg-muted text-muted-foreground",
+  Optimized:   "bg-primary/10 text-primary",
+  Resolved:    "bg-muted text-muted-foreground",
+};
+
+const NOTIFICATIONS: { tech: string; job: string; status: Status }[] = [
   { tech: "Marcus T.", job: "HVAC — Downtown Office",          status: "Dispatched"  },
   { tech: "Sarah K.",  job: "Route — Riverside loop",          status: "Optimized"   },
   { tech: "James R.",  job: "Electrical — Harbor Blvd",        status: "Rescheduled" },
@@ -14,25 +25,7 @@ const NOTIFICATIONS = [
   { tech: "Priya M.",  job: "New job — Harbor Blvd pm",        status: "Dispatched"  },
   { tech: "Marcus T.", job: "Route optimized — saved 14 min",  status: "Optimized"   },
   { tech: "Sarah K.",  job: "Emergency — Central Tower",       status: "Dispatched"  },
-] as const;
-
-type Status = (typeof NOTIFICATIONS)[number]["status"];
-
-const STATUS_STYLES: Record<Status, string> = {
-  Dispatched:  "bg-accent/40 text-accent-foreground",
-  "En Route":  "bg-primary/10 text-primary",
-  Rescheduled: "bg-muted text-muted-foreground",
-  Optimized:   "bg-primary/10 text-primary",
-  Resolved:    "bg-muted text-muted-foreground",
-};
-
-function StatusBadge({ status }: { status: Status }) {
-  return (
-    <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ${STATUS_STYLES[status]}`}>
-      {status}
-    </span>
-  );
-}
+];
 
 // Ticker geometry — must stay in sync with the card JSX below
 const CARD_H = 64;   // px — fixed card height
@@ -115,7 +108,7 @@ export function DispatchPreview() {
                       <p className="text-[13px] text-muted-foreground leading-tight truncate">{row.job}</p>
                     </div>
                   </div>
-                  <StatusBadge status={row.status} />
+                  <Badge variant="outline" className={STATUS_STYLES[row.status]}>{row.status}</Badge>
                 </div>
               );
             })}

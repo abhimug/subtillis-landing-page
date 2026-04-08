@@ -3,6 +3,5 @@
 export const API_ROUTES = {
   elevenlabs: {
     signedUrl: "/api/elevenlabs/signed-url",
-    agentId: "/api/elevenlabs/agent-id",
   },
 } as const;
